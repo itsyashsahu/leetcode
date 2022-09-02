@@ -11,13 +11,10 @@
  */
 class Solution {
 public:
-    int ans = 0;
     int countNodes(TreeNode* root) {
         if(!root) return 0;
         int lh=0, rh=0;
         TreeNode *l=root, *r=root;
-        ans++;
-        cout<<"ans -> "<<ans<<endl;
         while(l) {lh++; l=l->left;}
         
         while(r) {rh++; r=r->right;}
