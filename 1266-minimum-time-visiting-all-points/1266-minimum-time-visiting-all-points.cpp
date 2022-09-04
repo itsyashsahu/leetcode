@@ -15,17 +15,8 @@ public:
             diffX-=count;
             diffY-=count;
             
-//             while( diffX >0 && diffY > 0 ){
-//                 count++;
-//                 diffX--;
-//                 diffY--;
-//             }
-
-            // if( diffX )
             count+=diffX;
             
-            // if( diffY )
-            //     count+=diffY;
             ans +=count;
         }
         return ans;
