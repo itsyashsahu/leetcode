@@ -1,9 +1,13 @@
 class Solution:
     def generate(self, n: int) -> List[List[int]]:
         ans = []
-        for l in range(n):
+        for l in range(1,n+1):
             temp = []
-            for r in range(l+1):
-                temp.append(comb(l,r))
+            t = 1
+            temp.append(1)
+            for r in range(1,l):
+                t *=(l-r)
+                t = t//r 
+                temp.append(t)
             ans.append(temp)
         return ans
