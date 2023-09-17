@@ -6,8 +6,8 @@ class Solution:
             t = 1
             temp.append(1)
             for r in range(1,l):
-                t *=(l-r)
-                t = t//r 
+                t =(t*(l-r))//r
+                # t = t//r 
                 temp.append(t)
             ans.append(temp)
         return ans
