@@ -1,20 +1,27 @@
 class Solution:
     def setZeroes(self, mat: List[List[int]]) -> None:
-        # col0 = 1
+        col0 = 1
         m = len(mat)
         n = len(mat[0])
-        row = []
-        col = []
         for i in range(m):
             for j in range(n):
                 if mat[i][j]==0:
-                    row.append(i)
-                    col.append(j)
+                    mat[0][j] = 0
+                    if i != 0:
+                        mat[i][0] = 0
+                    else:
+                        col0 = 0
+        for i in range(1,m):
+            for j in range(1,n):
+                if mat[0][j] ==0 or mat[i][0] ==0:
+                    mat[i][j]=0
         
-        for r in row:
-            for i in range(n):
-                mat[r][i]=0
-        for c in col:
+        if mat[0][0] ==0:
             for i in range(m):
-                mat[i][c]=0
-                
+                mat[i][0]=0
+
+        if col0 ==0:
+            for i in range(n):
+                mat[0][i]=0 
+
+        
