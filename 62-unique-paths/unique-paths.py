@@ -3,7 +3,6 @@ class Solution:
         if m==1 or n==1:
             return 1
         dp = [ [-1]*n for _ in range(m)]
-        # print(dp,"dp -- ")
         def solve(i,j):
             if dp[i][j]!=-1:
                 return dp[i][j]
