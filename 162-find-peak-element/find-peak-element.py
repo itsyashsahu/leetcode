@@ -19,3 +19,4 @@ class Solution:
                 else:
                     e = m-1
             return e
+        return -1
