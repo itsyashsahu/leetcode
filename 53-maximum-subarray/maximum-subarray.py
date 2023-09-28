@@ -3,9 +3,9 @@ class Solution:
         ans = -inf
         sumi = 0
         for num in nums:
-            sumi +=num
+            sumi+=num
             ans = max(ans,sumi)
             if sumi<0:
                 sumi=0
-        return ans 
+        return ans
         
