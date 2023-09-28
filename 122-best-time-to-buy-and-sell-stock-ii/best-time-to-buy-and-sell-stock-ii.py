@@ -7,10 +7,7 @@ class Solution:
             temp.append(prices[i+1]-prices[i])
         
         def lcs(arr):
-            # maxi = max(arr)
             sumi = 0
-            # if maxi <0:
-            #     return maxi
             for i in range(len(arr)):
                 if arr[i]>=0:
                     sumi+=arr[i]
