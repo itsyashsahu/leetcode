@@ -34,21 +34,16 @@ class Solution:
             1: 'One'
         }
         if num ==0:
-            return "Zero"
-        
-        result = ""
-
+            return 'Zero'
+        result =""
         for n,name in d.items():
             count = 0
             if num>=n:
                 count = num//n
-                num=num%n
+                num = num%n
                 if count>1 or n>=100:
-                    # print(n," == ",result)
-                    result = result + " " + self.numberToWords(count)+" "+name
-                    # pass
+                    result += " " + self.numberToWords(count) + " " + name
                 else:
-                    result= result + " "+name
-                
-        result = result[1:]
-        return result
+                    result += " " + name
+    
+        return result[1:]
